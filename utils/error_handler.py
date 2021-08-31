@@ -35,8 +35,8 @@ class CommandErrorHandler(commands.Cog):
                 icon_url="https://raw.githubusercontent.com/DynamicDonkey/Mayuko/master/assets/pfp.jpg",
             )
             await ctx.send(embed=error_embed)
-        if isinstance(error, commands.BotMissingPermissions):
-            await ctx.send("Detected a missing permission.")
+        if isinstance(error, commands.CommandNotFound):
+            await ctx.send("Ignoring unknown command.")
         if isinstance(error, commands.NSFWChannelRequired):
             error_embed.add_field(
                 name="NSFW content",
