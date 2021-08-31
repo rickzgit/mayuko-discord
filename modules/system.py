@@ -97,7 +97,7 @@ class SystemCommands(commands.Cog):
                 icon_url="https://raw.githubusercontent.com/DynamicDonkey/Mayuko/master/assets/pfp.jpg",
             )
             await ctx.send(embed=help_embed)
-        else:
+        if arg == None:
             help_embed.add_field(
                 name="$waifu",
                 value="Pull a random Waifu or Husbando from MyWaifuList.moe",
